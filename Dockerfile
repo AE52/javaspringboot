@@ -1,11 +1,11 @@
-# Temel imaj
+# Temel imaj olarak OpenJDK 17 kullanılıyor
 FROM openjdk:17-jdk-slim
 
-# Çalışma dizinini ayarla
+# Uygulama içindeki çalışma dizini
 WORKDIR /app
 
-# JAR dosyasını kopyala
-COPY target/my-spring-boot-app.jar app.jar
+# Maven kullanarak oluşturduğunuz JAR dosyasını kopyala
+COPY target/*.jar app.jar
 
 # Uygulamayı çalıştır
 ENTRYPOINT ["java", "-jar", "app.jar"]
