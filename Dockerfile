@@ -1,5 +1,5 @@
 # Temel imaj olarak OpenJDK 17 kullanılıyor
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 
 # Uygulama içindeki çalışma dizini
 WORKDIR /app
